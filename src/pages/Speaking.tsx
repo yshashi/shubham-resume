@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Users, Video } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -110,7 +109,6 @@ const Speaking = () => {
           </p>
         </motion.div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -129,7 +127,6 @@ const Speaking = () => {
           ))}
         </motion.div>
 
-        {/* Events Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {events.map((event, index) => (
             <motion.div
@@ -203,7 +200,6 @@ const Speaking = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

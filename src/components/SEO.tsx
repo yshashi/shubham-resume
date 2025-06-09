@@ -33,27 +33,20 @@ const SEO: React.FC<SEOProps> = ({
 
   return (
     <Helmet>
-      {/* Basic Metadata */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      
-      {/* Open Graph / Facebook */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:image" content={fullOgImageUrl} />
-      
-      {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullTwitterImageUrl} />
-      
-      {/* Canonical URL */}
       <link rel="canonical" href={fullCanonicalUrl} />
     </Helmet>
   );

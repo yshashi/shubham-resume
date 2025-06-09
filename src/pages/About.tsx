@@ -99,10 +99,9 @@ const About = () => {
             in building scalable AI/ML solutions. Currently driving innovation at IDFC First Bank 
             while actively contributing to the tech community through speaking and content creation.
           </p>
-        </motion.div>
+          </motion.div>
 
-        {/* Achievements Section */}
-        <motion.section
+          <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -130,10 +129,9 @@ const About = () => {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+          </motion.section>
 
-        {/* Timeline Section */}
-        <motion.section
+          <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -187,7 +185,7 @@ const About = () => {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+          </motion.section>
         </div>
       </div>
     </>

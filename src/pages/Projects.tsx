@@ -116,7 +116,6 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -138,7 +137,6 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
         <motion.div
           layout
           className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"

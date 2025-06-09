@@ -98,7 +98,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid gap-12 lg:grid-cols-2">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -182,14 +181,12 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
-            {/* Contact Details */}
             <div className="p-8 rounded-lg border bg-card border-border">
               <h2 className="mb-6 text-2xl font-bold text-foreground">Contact Information</h2>
               
@@ -217,7 +214,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="p-8 rounded-lg border bg-card border-border">
               <h2 className="mb-6 text-2xl font-bold text-foreground">Follow Me</h2>
               
@@ -239,7 +235,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Availability */}
             <div className="p-8 bg-gradient-to-br rounded-lg border from-primary/10 to-secondary/10 border-primary/20">
               <h2 className="mb-4 text-2xl font-bold text-foreground">Let's Collaborate!</h2>
               <p className="mb-4 text-muted-foreground">

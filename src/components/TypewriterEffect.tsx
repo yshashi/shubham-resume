@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface TypewriterEffectProps {
   words: string[];
@@ -22,19 +22,15 @@ const TypewriterEffect = ({
     
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        // Typing
         if (currentText.length < currentWord.length) {
           setCurrentText(currentWord.slice(0, currentText.length + 1));
         } else {
-          // Start deleting after delay
           setTimeout(() => setIsDeleting(true), delayBetweenWords);
         }
       } else {
-        // Deleting
         if (currentText.length > 0) {
           setCurrentText(currentText.slice(0, -1));
         } else {
-          // Move to next word
           setIsDeleting(false);
           setCurrentWordIndex((prev) => (prev + 1) % words.length);
         }

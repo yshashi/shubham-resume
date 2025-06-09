@@ -74,7 +74,6 @@ const Home = () => {
           "knowsAbout": ["Data Science", "Machine Learning", "Artificial Intelligence", "Public Speaking", "Content Creation"]
         }}
       />
-      {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl animate-pulse bg-primary/20"></div>
         <div className="absolute right-1/4 bottom-1/4 w-96 h-96 rounded-full blur-3xl delay-1000 animate-pulse bg-secondary/20"></div>

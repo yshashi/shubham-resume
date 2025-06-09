@@ -114,7 +114,6 @@ const Blogs = () => {
           </p>
         </motion.div>
 
-        {/* Medium Integration Notice */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -135,7 +134,6 @@ const Blogs = () => {
           </Button>
         </motion.div>
 
-        {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -157,7 +155,6 @@ const Blogs = () => {
           ))}
         </motion.div>
 
-        {/* Featured Post */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -202,7 +199,6 @@ const Blogs = () => {
           </div>
         </motion.div>
 
-        {/* Blog Posts Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.slice(1).map((post, index) => (
             <motion.article
@@ -263,7 +259,6 @@ const Blogs = () => {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

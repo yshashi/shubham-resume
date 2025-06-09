@@ -78,7 +78,6 @@ const Experience = () => {
         </motion.div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
-          {/* Company Tabs */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -112,7 +111,6 @@ const Experience = () => {
             </div>
           </motion.div>
 
-          {/* Experience Details */}
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, x: 20 }}
