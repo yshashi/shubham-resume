@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Youtube } from 'lucide-react';
 import TypewriterEffect from '../components/TypewriterEffect';
 import { Button } from '@/components/ui/button';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const roles = [
@@ -42,6 +45,35 @@ const Home = () => {
 
   return (
     <div className="flex overflow-hidden relative justify-center items-center min-h-screen">
+      <SEO 
+        title="Shubham Agnihotri | Senior Data Scientist & ML Engineer"
+        description="Shubham Agnihotri is a Senior Data Scientist at IDFC First Bank, driving innovation through data science, machine learning, and AI."
+        keywords="data science, machine learning, AI, ML engineer, public speaker, content creator, IDFC First Bank"
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Shubham Agnihotri",
+          "jobTitle": "Senior Data Scientist",
+          "description": "Driving innovation through data science at IDFC First Bank. Passionate about sharing knowledge and building the future of AI.",
+          "image": "https://shubhamagnihotri.dev/profile-image.jpg",
+          "sameAs": [
+            "https://linkedin.com/in/shubhamagnihotri",
+            "https://github.com/shubhamagnihotri",
+            "https://youtube.com/@shubhamagnihotri"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "IDFC First Bank"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Your University"
+          },
+          "knowsAbout": ["Data Science", "Machine Learning", "Artificial Intelligence", "Public Speaking", "Content Creation"]
+        }}
+      />
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl animate-pulse bg-primary/20"></div>
@@ -118,7 +150,7 @@ const Home = () => {
             Download Resume
           </Button>
           <Button variant="outline" size="lg" className="px-8 py-6 text-lg">
-            View My Work
+            <Link to="/projects">View My Work</Link>
           </Button>
         </motion.div>
       </motion.div>

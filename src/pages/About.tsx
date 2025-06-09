@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, Calendar, MapPin } from 'lucide-react';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 
 const About = () => {
   const achievements = [
@@ -57,9 +59,33 @@ const About = () => {
   ];
 
   return (
-    <div className="px-4 py-20 min-h-screen">
-      <div className="mx-auto max-w-6xl">
-        <motion.div
+    <>
+      <SEO 
+        title="About Shubham Agnihotri | Background & Achievements"
+        description="Learn about Shubham Agnihotri's background, achievements, and journey as a Senior Data Scientist and ML Engineer."
+        keywords="about Shubham Agnihotri, data scientist background, ML engineer achievements, tech speaker, Times Gujarat Icon"
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "headline": "About Shubham Agnihotri",
+          "description": "Background, achievements, and professional journey of Shubham Agnihotri, a Senior Data Scientist at IDFC First Bank.",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Shubham Agnihotri",
+            "jobTitle": "Senior Data Scientist",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "IDFC First Bank"
+            },
+            "description": "A passionate data scientist and tech enthusiast with over 4 years of experience in building scalable AI/ML solutions."
+          }
+        }}
+      />
+      <div className="px-4 py-20 min-h-screen">
+        <div className="mx-auto max-w-6xl">
+          <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -162,8 +188,9 @@ const About = () => {
             ))}
           </div>
         </motion.section>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Users, Video } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '../components/SEO';
 
 const Speaking = () => {
   const events = [
@@ -87,6 +88,12 @@ const Speaking = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Speaking | Shubham Agnihotri - Tech Talks & Presentations"
+        description="Discover Shubham Agnihotri's speaking engagements, tech talks, and presentations on data science, machine learning, and AI innovations."
+        keywords="tech talks, data science presentations, AI conferences, machine learning speaker, Shubham Agnihotri speaking"
+      />
     <div className="px-4 py-20 min-h-screen">
       <div className="mx-auto max-w-7xl">
         <motion.div
@@ -216,6 +223,7 @@ const Speaking = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 

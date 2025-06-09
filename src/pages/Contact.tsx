@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, Linkedin, Github, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -74,6 +75,12 @@ const Contact = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Contact | Get in Touch with Shubham Agnihotri"
+        description="Contact Shubham Agnihotri for speaking engagements, collaboration opportunities, or to discuss data science and machine learning projects."
+        keywords="contact Shubham Agnihotri, hire data scientist, speaking engagement, collaboration, ML consultant, data science expert"
+      />
     <div className="px-4 py-20 min-h-screen">
       <div className="mx-auto max-w-7xl">
         <motion.div
@@ -248,6 +255,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,0 +1,9 @@
+# robots.txt for Shubham Agnihotri's Portfolio Website
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://shubhamagnihotri.dev/sitemap.xml
+
+# Optimize crawling rate
+Crawl-delay: 10

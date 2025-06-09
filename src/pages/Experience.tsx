@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Calendar, TrendingUp } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -54,6 +55,12 @@ const Experience = () => {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Experience | Shubham Agnihotri's Professional Journey"
+        description="Explore Shubham Agnihotri's professional experience as a Senior Data Scientist at IDFC First Bank and previous roles in data science and ML engineering."
+        keywords="data science experience, ML engineer career, IDFC First Bank, professional background, data scientist roles, Shubham Agnihotri career"
+      />
     <div className="px-4 py-20 min-h-screen">
       <div className="mx-auto max-w-6xl">
         <motion.div
@@ -186,6 +193,7 @@ const Experience = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

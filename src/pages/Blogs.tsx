@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 
 const Blogs = () => {
   const blogPosts = [
@@ -65,6 +67,37 @@ const Blogs = () => {
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
   return (
+    <>
+      <SEO 
+        title="Blogs | Shubham Agnihotri - Data Science & AI Insights"
+        description="Read Shubham Agnihotri's blogs on data science, machine learning, AI innovations, and technology trends. Gain insights from a senior data scientist."
+        keywords="data science blogs, machine learning articles, AI insights, ML engineer writing, technology trends, Shubham Agnihotri blogs"
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "headline": "Shubham Agnihotri's Data Science & Machine Learning Blog",
+          "description": "Insights, tutorials, and thoughts on data science, machine learning, and AI from Shubham Agnihotri.",
+          "author": {
+            "@type": "Person",
+            "name": "Shubham Agnihotri",
+            "jobTitle": "Senior Data Scientist"
+          },
+          "blogPost": blogPosts.map(blog => ({
+            "@type": "BlogPosting",
+            "headline": blog.title,
+            "description": blog.excerpt,
+            "datePublished": blog.date,
+            "image": blog.image,
+            "author": {
+              "@type": "Person",
+              "name": "Shubham Agnihotri"
+            },
+            "keywords": blog.tags.join(", ")
+          }))
+        }}
+      />
     <div className="px-4 py-20 min-h-screen">
       <div className="mx-auto max-w-7xl">
         <motion.div
@@ -254,6 +287,7 @@ const Blogs = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 

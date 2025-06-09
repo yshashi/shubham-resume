@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
 
 const Projects = () => {
   const projects = [
@@ -69,7 +71,36 @@ const Projects = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <div className="px-4 py-20 min-h-screen">
+    <>
+      <SEO 
+        title="Projects | Shubham Agnihotri's Portfolio"
+        description="Explore Shubham Agnihotri's data science and machine learning projects, showcasing expertise in AI, NLP, and computer vision."
+        keywords="data science projects, machine learning portfolio, AI projects, NLP, computer vision, ML engineer projects"
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "headline": "Shubham Agnihotri's Data Science & Machine Learning Projects",
+          "description": "A collection of innovative data science and machine learning projects by Shubham Agnihotri.",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": projects.map((project, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "SoftwareSourceCode",
+                "name": project.title,
+                "description": project.description,
+                "codeRepository": project.github,
+                "programmingLanguage": project.technologies.join(", "),
+                "url": project.demo
+              }
+            }))
+          }
+        }}
+      />
+      <div className="px-4 py-20 min-h-screen">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -195,6 +226,7 @@ const Projects = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 
