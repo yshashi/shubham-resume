@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,15 +18,15 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-md bg-background/80 border-border">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-2xl font-bold text-primary">
             Shubham Agnihotri
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden items-center space-x-8 md:flex">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -39,12 +40,13 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
+            className="p-2 md:hidden"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -68,6 +70,9 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
+              <div className="px-3 py-2">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         )}
