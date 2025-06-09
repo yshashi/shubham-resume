@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, Github, Linkedin, Youtube } from 'lucide-react';
+import { Download, Github, Linkedin, Youtube } from 'lucide-react';
 import TypewriterEffect from '../components/TypewriterEffect';
 import { Button } from '@/components/ui/button';
 import SEO from '../components/SEO';
@@ -92,7 +91,7 @@ const Home = () => {
           <div className="p-1 mx-auto mb-8 w-48 h-48 bg-gradient-to-br rounded-full from-primary to-secondary">
             <div className="flex justify-center items-center w-full h-full rounded-full bg-background">
               <div className="flex justify-center items-center w-40 h-40 text-6xl font-bold bg-gradient-to-br rounded-full from-primary/20 to-secondary/20 text-primary">
-                SA
+                <img className='object-cover w-full h-full rounded-full' src="https://raw.githubusercontent.com/KillerStrike17/KillerStrike17.github.io/refs/heads/master/assets/Shubham%20Agnihotri.webp" alt="Shubham Agnihotri" />
               </div>
             </div>
           </div>
