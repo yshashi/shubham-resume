@@ -1,0 +1,58 @@
+/* Custom styling for react-slick carousel */
+
+.carousel-slider {
+  position: relative;
+}
+
+/* Dots styling */
+.carousel-slider .slick-dots {
+  bottom: 16px;
+  z-index: 10;
+}
+
+.carousel-slider .slick-dots li {
+  margin: 0 4px;
+}
+
+.carousel-slider .slick-dots li button:before {
+  display: none;
+}
+
+/* Custom dots styling handled in component */
+.custom-dots {
+  padding: 0;
+}
+
+/* Arrow styling - handled in component */
+
+/* Slide transition */
+.slick-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slick-slide.slick-active {
+  opacity: 1;
+}
+
+/* Caption styling */
+.image-caption {
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.slick-active .image-caption {
+  transform: translateY(0);
+}
+
+/* Make sure images don't get distorted */
+.carousel-slider img {
+  margin: 0 auto;
+}
+
+/* Ensure proper height on mobile */
+@media (max-width: 640px) {
+  .carousel-slider .slick-slide img {
+    height: 300px;
+  }
+}

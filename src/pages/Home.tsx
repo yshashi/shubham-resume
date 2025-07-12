@@ -88,9 +88,9 @@ const Home = () => {
           variants={itemVariants}
           className="mb-8"
         >
-          <div className="p-1 mx-auto mb-8 w-48 h-48 bg-gradient-to-br rounded-full from-primary to-secondary">
+          <div className="p-1 mx-auto mb-8 w-96 h-96 bg-gradient-to-br rounded-full from-primary to-secondary">
             <div className="flex justify-center items-center w-full h-full rounded-full bg-background">
-              <div className="flex justify-center items-center w-40 h-40 text-6xl font-bold bg-gradient-to-br rounded-full from-primary/20 to-secondary/20 text-primary">
+              <div className="flex justify-center items-center w-[22rem] h-[22rem] text-6xl font-bold bg-gradient-to-br rounded-full from-primary/20 to-secondary/20 text-primary">
                 <img className='object-cover w-full h-full rounded-full' src="https://raw.githubusercontent.com/KillerStrike17/KillerStrike17.github.io/refs/heads/master/assets/Shubham%20Agnihotri.webp" alt="Shubham Agnihotri" />
               </div>
             </div>

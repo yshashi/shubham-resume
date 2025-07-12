@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Users, Video } from 'lucide-react';
+import { Calendar, MapPin, Users, Video, ChevronRight, MoreHorizontal } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import SEO from '../components/SEO';
 
 const Speaking = () => {
   const events = [
     {
+      id: "techshow-london-2024",
       title: "TechShow London 2024",
       event: "International Tech Conference",
       date: "March 15, 2024",
@@ -18,6 +20,7 @@ const Speaking = () => {
       type: "Keynote"
     },
     {
+      id: "tensorflow-everywhere-india",
       title: "TensorFlow Everywhere India",
       event: "Google Developer Conference",
       date: "January 20, 2024",
@@ -30,6 +33,7 @@ const Speaking = () => {
       type: "Workshop"
     },
     {
+      id: "devfest-ahmedabad-2023",
       title: "DevFest Ahmedabad 2023",
       event: "Google Developer Groups",
       date: "November 12, 2023",
@@ -42,6 +46,7 @@ const Speaking = () => {
       type: "Panel"
     },
     {
+      id: "aws-community-day",
       title: "AWS Community Day",
       event: "AWS User Group",
       date: "September 8, 2023",
@@ -54,6 +59,7 @@ const Speaking = () => {
       type: "Technical Talk"
     },
     {
+      id: "pydata-mumbai-meetup",
       title: "PyData Mumbai Meetup",
       event: "Python Data Science Community",
       date: "July 15, 2023",
@@ -66,6 +72,7 @@ const Speaking = () => {
       type: "Meetup Talk"
     },
     {
+      id: "data-science-conference",
       title: "Data Science Conference",
       event: "National Analytics Summit",
       date: "May 22, 2023",
@@ -150,10 +157,10 @@ const Speaking = () => {
                 </div>
                 <div className="flex absolute inset-0 justify-center items-center opacity-0 transition-opacity duration-300 bg-black/60 group-hover:opacity-100">
                   <Button variant="secondary" asChild>
-                    <a href={event.videoUrl} target="_blank" rel="noopener noreferrer">
-                      <Video size={16} className="mr-2" />
-                      Watch Video
-                    </a>
+                    <Link to={`/speaking/${event.id}`}>
+                      More details
+                      <ChevronRight size={16} className="ml-2" />
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -189,12 +196,20 @@ const Speaking = () => {
                   {event.description}
                 </p>
 
-                <Button variant="outline" size="sm" className="w-full" asChild>
-                  <a href={event.videoUrl} target="_blank" rel="noopener noreferrer">
-                    <Video size={16} className="mr-2" />
-                    Watch Presentation
-                  </a>
-                </Button>
+                <div className="flex gap-2">
+                  <Button variant="outline" size="sm" className="flex-1" asChild>
+                    <a href={event.videoUrl} target="_blank" rel="noopener noreferrer">
+                      <Video size={16} className="mr-2" />
+                      Watch
+                    </a>
+                  </Button>
+                  <Button variant="default" size="sm" className="flex-1" asChild>
+                    <Link to={`/speaking/${event.id}`}>
+                      Details
+                      <ChevronRight size={16} className="ml-2" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </motion.div>
           ))}
